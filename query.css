@@ -1,29 +1,42 @@
-@media (max-width: 600px) {
-    header {
-        position: relative;
-    }
-    header nav {
-         display: none;   
-        position: absolute;
-        top: 70px;
-        background-color: #15304c;
-        width: 100%;
-    }
-    .menu-icon {
-        display: block;
-        color: white;
+@media only screen and (max-width: 600px){
+    .logo{
         font-size: 23px;
+
     }
-    header nav li {
+    .hamburger{
         display: block;
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    } 
-    
-}
-@media (min-width: 600px){
-    header nav {
-        display: block !important;       
     }
-}
+        .hamburger.active .line:nth-child(1){
+             transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .line:nth-child(2){
+            opacity: 0;
+        }
+       
+        .hamburger.active .line:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    .nav-bar{
+        padding: 0 0px;
+    }
+    .nav-menu{
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        flex-direction: column;
+        left: -100%;
+        top: 69px;
+        transition: 0.3s;
+        gap: 0;
+        background-color: rgba(0,0,0,0.6);
+        border-bottom: 1px solid #fff;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+} 
+    
+    
